@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class Player : MonoBehaviour
 {
+    public Bullet bulletPrefab;
     private Rigidbody2D _rigidbody;
     private bool _thrusting;
     private float _turnDirection;
@@ -39,5 +40,10 @@ public class Player : MonoBehaviour
         {
             _rigidbody.AddTorque(_turnDirection*_turnSpeed);
         }
+    }
+    private void Shoot()
+    {
+        Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
+        bullet.Project(transform.up);
     }
 }
