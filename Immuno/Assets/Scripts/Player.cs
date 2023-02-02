@@ -28,6 +28,11 @@ public class Player : MonoBehaviour
         {
             _turnDirection = 0.0f;
         }
+
+        if (Input.GetKeyDown(KeyCode.Space) || Input.GetMouseButtonDown(0))
+        {
+            Shoot();
+        }
         
     }
     private void FixedUpdate()
