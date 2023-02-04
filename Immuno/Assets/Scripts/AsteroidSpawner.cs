@@ -23,10 +23,8 @@ public class AsteroidSpawner : MonoBehaviour
 
             Asteroid asteroid = Instantiate(asteroidPrefab, spawnPoint, rotation);
             asteroid.size = Random.Range(asteroid.minSize, asteroid.maxSize);
-        }
-    }
-    private void SetTrajectory()
-    {
 
+            asteroid.SetTrajectory(rotation * -spawnDirection);
+        }
     }
 }

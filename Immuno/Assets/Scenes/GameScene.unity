@@ -133,7 +133,7 @@ GameObject:
   m_Component:
   - component: {fileID: 132265156}
   - component: {fileID: 132265155}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: leftBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -275,7 +275,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1119231768}
   - component: {fileID: 1119231767}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: rightBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -455,7 +455,7 @@ BoxCollider2D:
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 0.87890625, y: 0.87890625}
+  m_Size: {x: 0.7, y: 0.7}
   m_EdgeRadius: 0
 --- !u!114 &1369871211
 MonoBehaviour:
@@ -471,7 +471,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   bulletPrefab: {fileID: 6537063257580218033, guid: e7c99a74e18182f439d91234598f3a21, type: 3}
   _thrustSpeed: 1
-  _turnSpeed: 0.1
+  _turnSpeed: 0.15
 --- !u!1 &1662164112
 GameObject:
   m_ObjectHideFlags: 0
@@ -482,7 +482,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1662164113}
   - component: {fileID: 1662164114}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: topBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -540,7 +540,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1686264108}
   - component: {fileID: 1686264107}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: bottomBoundary
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -646,7 +646,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 2019083596}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Boundaries
   m_TagString: Untagged
   m_Icon: {fileID: 0}

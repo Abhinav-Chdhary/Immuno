@@ -5,6 +5,8 @@ public class Asteroid : MonoBehaviour
     public float size = 1.25f;
     public float minSize = 0.75f;
     public float maxSize = 1.75f;
+    public float speed = 50.0f;
+    public float maxLifeTime = 30.0f;
     public Sprite[] sprites;
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody;
@@ -22,5 +24,11 @@ public class Asteroid : MonoBehaviour
         transform.localScale = Vector3.one * size;
         
         _rigidbody.mass= size;
+    }
+    public void SetTrajectory(Vector2 direction)
+    {
+        _rigidbody.AddForce(direction*speed);
+
+        Destroy(gameObject, maxLifeTime);
     }
 }
