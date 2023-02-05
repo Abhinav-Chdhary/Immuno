@@ -35,7 +35,7 @@ public class Asteroid : MonoBehaviour
     {
         if (collision.gameObject.tag == "Bullet")
         {
-            if (size / 2 > minSize)
+            if (size / 2 > minSize && _spriteRenderer.sprite != sprites[0])
             {
                 CreateSplit();
                 CreateSplit();
