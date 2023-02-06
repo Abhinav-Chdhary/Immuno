@@ -14,6 +14,7 @@ public class GameManager : MonoBehaviour
     }
     private void Respawn()
     {
+        player.transform.position= Vector3.zero;
         player.gameObject.SetActive(true);
     }
 }
