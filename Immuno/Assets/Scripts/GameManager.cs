@@ -10,11 +10,22 @@ public class GameManager : MonoBehaviour
     public void PlayerDied()
     {
         lives--;
-        Invoke(nameof(Respawn), respawnTime);
+        if (lives <= 0)
+        {
+            GameOver();
+        }
+        else
+        {
+            Invoke(nameof(Respawn), respawnTime);
+        }
     }
     private void Respawn()
     {
         player.transform.position= Vector3.zero;
         player.gameObject.SetActive(true);
+    }
+    private void GameOver()
+    {
+        //something
     }
 }
