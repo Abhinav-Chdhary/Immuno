@@ -51,6 +51,10 @@ public class Player : MonoBehaviour
         Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
         bullet.Project(transform.up);
     }
+    private void OnEnable()
+    {
+        
+    }
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collision.gameObject.tag == "Asteroid")
