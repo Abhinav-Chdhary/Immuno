@@ -22,7 +22,13 @@ public class GameManager : MonoBehaviour
     private void Respawn()
     {
         player.transform.position= Vector3.zero;
+        player.gameObject.layer = LayerMask.NameToLayer("IgnoreCollisions");
         player.gameObject.SetActive(true);
+        player.Invoke(nameof(TurnOnCollisions), 3.0f);
+    }
+    private void TurnOnCollisions()
+    {
+        player.gameObject.layer = LayerMask.NameToLayer("Player");
     }
     private void GameOver()
     {
