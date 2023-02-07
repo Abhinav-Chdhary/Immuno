@@ -24,7 +24,7 @@ public class GameManager : MonoBehaviour
         player.transform.position= Vector3.zero;
         player.gameObject.layer = LayerMask.NameToLayer("IgnoreCollisions");
         player.gameObject.SetActive(true);
-        player.Invoke(nameof(TurnOnCollisions), 3.0f);
+        Invoke(nameof(TurnOnCollisions), 3.0f);
     }
     private void TurnOnCollisions()
     {
