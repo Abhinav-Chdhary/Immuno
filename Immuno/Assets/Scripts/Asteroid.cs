@@ -7,14 +7,17 @@ public class Asteroid : MonoBehaviour
     public float maxSize = 1.75f;
     public float speed = 50.0f;
     public float maxLifeTime = 30.0f;
+    public float radiusOffSet = 2;
     public Sprite[] sprites;
     private SpriteRenderer _spriteRenderer;
     private Rigidbody2D _rigidbody;
+    private CircleCollider2D _circleCollider;
 
     private void Awake()
     {
         _rigidbody= GetComponent<Rigidbody2D>();
         _spriteRenderer= GetComponent<SpriteRenderer>();
+        _circleCollider = GetComponent<CircleCollider2D>();
     }
     private void Start()
     {
@@ -22,7 +25,10 @@ public class Asteroid : MonoBehaviour
 
         transform.eulerAngles = new Vector3(0,0,Random.value*360.0f);
         transform.localScale = Vector3.one * size;
-        
+
+        float spriteRadius = _spriteRenderer.sprite.bounds.extents.magnitude;
+
+        _circleCollider.radius = spriteRadius-radiusOffSet;
         _rigidbody.mass= size;
     }
     public void SetTrajectory(Vector2 direction)
