@@ -5487,7 +5487,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0e9def98254cadb40b7594f680cde180, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerExplosion: {fileID: 0}
+  playerExplosion: {fileID: 788821208}
+  asteroidExplosion: {fileID: 1935357585}
   player: {fileID: 1369871211}
   lives: 3
   score: 0
