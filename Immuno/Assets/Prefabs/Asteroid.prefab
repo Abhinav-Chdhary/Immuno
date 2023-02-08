@@ -138,9 +138,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   size: 1.25
   minSize: 0.75
-  maxSize: 1.75
+  maxSize: 1.7
   speed: 7
   maxLifeTime: 15
+  radiusOffSet: 0.25
   sprites:
   - {fileID: 21300000, guid: 6012165421c05414da1bba358e98e8bc, type: 3}
   - {fileID: 21300000, guid: 27d082f750532bc4687899ab4bc3e031, type: 3}
