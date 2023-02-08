@@ -11,9 +11,15 @@ public class GameManager : MonoBehaviour
 
     public void AsteroidDestroyed(Asteroid asteroid)
     {
-        score++;
         asteroidExplosion.transform.position = asteroid.transform.position;
         asteroidExplosion.Play();
+
+        if (asteroid.size < 0.75)
+            score += 100;
+        else if (asteroid.size < 1.25)
+            score += 50;
+        else
+            score += 25;
     }
     public void PlayerDied()
     {
