@@ -5981,6 +5981,7 @@ MonoBehaviour:
   player: {fileID: 1369871211}
   _immunity: {fileID: 1212481018}
   _lives: {fileID: 842859441}
+  _gameOverText: {fileID: 0}
   lives: 3
   score: 0
   respawnTime: 3
@@ -10991,7 +10992,7 @@ MonoBehaviour:
     m_LineSpacing: 1
   m_Text: 'GameOver...
 
-    Press Enter to play again'
+    press Space to play again'
 --- !u!222 &1946515828
 CanvasRenderer:
   m_ObjectHideFlags: 0
