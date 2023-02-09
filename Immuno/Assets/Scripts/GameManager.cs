@@ -58,8 +58,10 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        lives = 0;
+        lives = 3;
         score = 0;
+        _lives.text = lives.ToString();
+        _immunity.text = score.ToString();
 
         Invoke(nameof(Respawn), respawnTime);
     }
