@@ -12,6 +12,11 @@ public class GameManager : MonoBehaviour
     public int score = 0;
     public float respawnTime = 3.0f;
 
+    private void Awake()
+    {
+        _lives.text = lives.ToString();
+        _immunity.text = score.ToString();
+    }
     public void AsteroidDestroyed(Asteroid asteroid)
     {
         asteroidExplosion.transform.position = asteroid.transform.position;
