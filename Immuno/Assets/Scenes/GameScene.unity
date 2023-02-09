@@ -5981,7 +5981,7 @@ MonoBehaviour:
   player: {fileID: 1369871211}
   _immunity: {fileID: 1212481018}
   _lives: {fileID: 842859441}
-  _gameOverText: {fileID: 0}
+  _gameOverText: {fileID: 1946515825}
   lives: 3
   score: 0
   respawnTime: 3
