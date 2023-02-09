@@ -8,6 +8,7 @@ public class GameManager : MonoBehaviour
     public Player player;
     public Text _immunity;
     public Text _lives;
+    public GameObject _gameOverText;
     public int lives = 3;
     public int score = 0;
     public float respawnTime = 3.0f;
@@ -16,6 +17,28 @@ public class GameManager : MonoBehaviour
     {
         _lives.text = lives.ToString();
         _immunity.text = score.ToString();
+        _gameOverText.gameObject.SetActive(false);
+    }
+    private void Update()
+    {
+        if(lives<=0 && Input.GetKeyDown(KeyCode.Space))
+        {
+            NewGame();
+        }
+        else
+        {
+            Application.Quit();
+        }
+    }
+    private void NewGame()
+    {
+        lives = 3;
+        score = 0;
+        _lives.text = lives.ToString();
+        _immunity.text = score.ToString();
+
+        _gameOverText.SetActive(false);
+        Invoke(nameof(Respawn), respawnTime);
     }
     public void AsteroidDestroyed(Asteroid asteroid)
     {
@@ -58,11 +81,6 @@ public class GameManager : MonoBehaviour
     }
     private void GameOver()
     {
-        lives = 3;
-        score = 0;
-        _lives.text = lives.ToString();
-        _immunity.text = score.ToString();
-
-        Invoke(nameof(Respawn), respawnTime);
+        _gameOverText.SetActive(true);
     }
 }
