@@ -1,10 +1,13 @@
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
     public ParticleSystem playerExplosion;
     public ParticleSystem asteroidExplosion;
     public Player player;
+    public Text _immunity;
+    public Text _lives;
     public int lives = 3;
     public int score = 0;
     public float respawnTime = 3.0f;
@@ -20,13 +23,14 @@ public class GameManager : MonoBehaviour
             score += 50;
         else
             score += 25;
+        _immunity.text = score.ToString();
     }
     public void PlayerDied()
     {
         playerExplosion.transform.position = player.transform.position;
         playerExplosion.Play();
 
-        lives--;
+        lives--; _lives.text = lives.ToString();
         if (lives <= 0)
         {
             GameOver();
