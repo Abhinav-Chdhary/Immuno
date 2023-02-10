@@ -12,9 +12,11 @@ public class GameManager : MonoBehaviour
     public int lives = 3;
     public int score = 0;
     public float respawnTime = 3.0f;
+    private AudioSource _explosionSound;
 
     private void Awake()
     {
+        _explosionSound = GetComponent<AudioSource>();
         _lives.text = lives.ToString();
         _immunity.text = score.ToString();
         _gameOverText.gameObject.SetActive(false);
@@ -44,6 +46,7 @@ public class GameManager : MonoBehaviour
     {
         asteroidExplosion.transform.position = asteroid.transform.position;
         asteroidExplosion.Play();
+        _explosionSound.Play();
 
         if (asteroid.size < 0.75)
             score += 100;
