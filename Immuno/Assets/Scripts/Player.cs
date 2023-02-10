@@ -8,10 +8,12 @@ public class Player : MonoBehaviour
     private float _turnDirection;
     public float _thrustSpeed = 1.0f;
     public float _turnSpeed = 1.0f;
+    private AudioSource _shootSound;
 
     private void Awake()
     {
         _rigidbody= GetComponent<Rigidbody2D>();
+        _shootSound= GetComponent<AudioSource>();
     }
     private void Update()
     {
@@ -48,6 +50,7 @@ public class Player : MonoBehaviour
     }
     private void Shoot()
     {
+        _shootSound.Play();
         Bullet bullet = Instantiate(bulletPrefab, transform.position, transform.rotation);
         bullet.Project(transform.up);
     }

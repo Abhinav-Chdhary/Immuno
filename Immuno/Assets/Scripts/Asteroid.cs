@@ -29,7 +29,7 @@ public class Asteroid : MonoBehaviour
         float spriteRadius = _spriteRenderer.sprite.bounds.extents.magnitude;
 
         _circleCollider.radius = spriteRadius-radiusOffSet;
-        _rigidbody.mass= size;
+        _rigidbody.mass = size;
     }
     public void SetTrajectory(Vector2 direction)
     {
