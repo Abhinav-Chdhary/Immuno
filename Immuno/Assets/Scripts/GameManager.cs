@@ -23,11 +23,11 @@ public class GameManager : MonoBehaviour
     }
     private void Update()
     {
-        if(lives<=0 && Input.GetKeyDown(KeyCode.Space))
+        if(lives<=0 && Input.GetKeyDown(KeyCode.Return))
         {
             NewGame();
         }
-        else
+        else if(Input.GetKeyDown(KeyCode.Escape))
         {
             Application.Quit();
         }
